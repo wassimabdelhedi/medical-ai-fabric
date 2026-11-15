@@ -38,7 +38,8 @@ for node in orderer.example.com peer0.org1.example.com peer0.org2.example.com; d
         echo -e "  ✅ Nœud actif : ${GREEN}$node${NC}"
     else
         echo -e "  ❌ Nœud manquant : ${RED}$node${NC}"
-        echo -e "${RED}Veuillez démarrer le réseau avec : ./SCRIPTS/setup/start_network.sh${NC}"
+        echo -e "${RED}Veuillez démarrer le réseau dans fabric-samples/test-network avec :${NC}"
+        echo -e "${YELLOW}  cd $TEST_NET && ./network.sh up createChannel -c mychannel${NC}"
         exit 1
     fi
 done
