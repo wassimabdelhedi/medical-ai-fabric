@@ -1,0 +1,17 @@
+{
+  "artifact_id": "73a0cdef-34bc-410d-9e93-0461337c4bd2",
+  "artifact_type": "AI_EXPLANATION",
+  "case_id": "CASE00001",
+  "run_id": "fa77ed5a-d93d-42cb-b987-4ae7fe6c9831",
+  "parent_artifact_ids": [
+    "92f2c31e-beb6-4c99-a23d-286b9eb365f2",
+    "7914993b-1c8c-4d78-9d84-b147484cf53f"
+  ],
+  "summary": "Le modèle a proposé la classe Normal avec un score de 88.9%. Les contrôles techniques configurés ont été satisfaits.",
+  "validation_status": "ACCEPTED",
+  "findings": [],
+  "confidence_kind": "random_forest_probability_not_clinically_calibrated",
+  "human_review_required": false,
+  "scope": "Explication de règles techniques; ni diagnostic ni explication causale médicale.",
+  "timestamp": "2026-11-17T22:08:11Z"
+}

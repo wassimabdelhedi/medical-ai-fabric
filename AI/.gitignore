@@ -1,0 +1,13 @@
+# Sensitive or oversized source data
+dataset/id_mapping_SECURE.json
+dataset/records100/
+dataset/records500/
+**/__pycache__/
+**/*.py[cod]
+.pytest_cache/
+venv/
+.venv/
+env/
+ENV/
+**/.DS_Store
+**/Thumbs.db

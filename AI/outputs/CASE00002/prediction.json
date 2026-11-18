@@ -1,0 +1,16 @@
+{
+  "artifact_id": "PRED00002",
+  "case_id": "CASE00002",
+  "artifact_type": "AI_PREDICTION",
+  "predicted_class": "Normal",
+  "confidence": 0.8562,
+  "probabilities": {
+    "Abnormal": 0.1438,
+    "Normal": 0.8562
+  },
+  "model_name": "PTB-XL ECG Normal-Abnormal Random Forest",
+  "model_version": "2.0.0",
+  "confidence_kind": "random_forest_probability_not_clinically_calibrated",
+  "parent_artifact_id": "FEAT00002",
+  "timestamp": "2026-11-15T23:24:52Z"
+}

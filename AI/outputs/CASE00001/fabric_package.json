@@ -1,0 +1,334 @@
+{
+  "schema_version": "1.0",
+  "package_type": "FABRIC_IA_DEMO_PACKAGE",
+  "generated_at_utc": "2026-11-17T22:08:12Z",
+  "case_id": "FABCASE-a224017d-dbf1-45eb-bb1a-978e4b2d3c59",
+  "run_id": "fa77ed5a-d93d-42cb-b987-4ae7fe6c9831",
+  "ledger_records": [
+    {
+      "schema_version": "1.0",
+      "artifact_id": "1f1fe950-9cb8-40dc-9406-38cbff1fc513",
+      "case_id": "FABCASE-a224017d-dbf1-45eb-bb1a-978e4b2d3c59",
+      "run_id": "fa77ed5a-d93d-42cb-b987-4ae7fe6c9831",
+      "artifact_type": "ECG_ORIGINAL",
+      "sha256": "c65e4abe0eb0e561c37284024c3668afe14e4cc5001b9420b17781e4906c65b6",
+      "created_at_utc": "2026-11-17T22:08:10Z",
+      "parent_artifact_ids": [],
+      "model_name": "PTB-XL ECG Normal-Abnormal Random Forest",
+      "model_version": "2.0.0",
+      "storage_ref": null,
+      "storage_state": "LOCAL_ONLY_REFERENCE_NOT_CONFIGURED",
+      "producer": "IA-ECG-prototype"
+    },
+    {
+      "schema_version": "1.0",
+      "artifact_id": "8db5ca92-03fd-40b5-acf8-88b73221ae80",
+      "case_id": "FABCASE-a224017d-dbf1-45eb-bb1a-978e4b2d3c59",
+      "run_id": "fa77ed5a-d93d-42cb-b987-4ae7fe6c9831",
+      "artifact_type": "ECG_PROCESSED",
+      "sha256": "f0c1a8a6c3e8e09376f04cceb64dc8de12cdc7bdc17cec5ccf059c842b515be0",
+      "created_at_utc": "2026-11-17T22:08:10Z",
+      "parent_artifact_ids": [
+        "1f1fe950-9cb8-40dc-9406-38cbff1fc513"
+      ],
+      "model_name": "PTB-XL ECG Normal-Abnormal Random Forest",
+      "model_version": "2.0.0",
+      "storage_ref": null,
+      "storage_state": "LOCAL_ONLY_REFERENCE_NOT_CONFIGURED",
+      "producer": "IA-ECG-prototype"
+    },
+    {
+      "schema_version": "1.0",
+      "artifact_id": "588c0eae-9049-4c0b-b7d6-34fc1583eee0",
+      "case_id": "FABCASE-a224017d-dbf1-45eb-bb1a-978e4b2d3c59",
+      "run_id": "fa77ed5a-d93d-42cb-b987-4ae7fe6c9831",
+      "artifact_type": "PREPROCESSING_REPORT",
+      "sha256": "c6c542f165ceedb857f2425a1508f65804cd801ca23fbeb30433c0893acedcfb",
+      "created_at_utc": "2026-11-17T22:08:10Z",
+      "parent_artifact_ids": [
+        "8db5ca92-03fd-40b5-acf8-88b73221ae80"
+      ],
+      "model_name": "PTB-XL ECG Normal-Abnormal Random Forest",
+      "model_version": "2.0.0",
+      "storage_ref": null,
+      "storage_state": "LOCAL_ONLY_REFERENCE_NOT_CONFIGURED",
+      "producer": "IA-ECG-prototype"
+    },
+    {
+      "schema_version": "1.0",
+      "artifact_id": "846a69cf-7ef9-4e08-a3db-0a2a0e08e04f",
+      "case_id": "FABCASE-a224017d-dbf1-45eb-bb1a-978e4b2d3c59",
+      "run_id": "fa77ed5a-d93d-42cb-b987-4ae7fe6c9831",
+      "artifact_type": "FEATURES",
+      "sha256": "fa8acb2481cf6bc53287567bbdcf6c3e5f8bf32c3fd994b2899105db643aab38",
+      "created_at_utc": "2026-11-17T22:08:10Z",
+      "parent_artifact_ids": [
+        "8db5ca92-03fd-40b5-acf8-88b73221ae80"
+      ],
+      "model_name": "PTB-XL ECG Normal-Abnormal Random Forest",
+      "model_version": "2.0.0",
+      "storage_ref": null,
+      "storage_state": "LOCAL_ONLY_REFERENCE_NOT_CONFIGURED",
+      "producer": "IA-ECG-prototype"
+    },
+    {
+      "schema_version": "1.0",
+      "artifact_id": "MODEL-1fcfbcb7af1fe6de94d48f99",
+      "case_id": "FABCASE-a224017d-dbf1-45eb-bb1a-978e4b2d3c59",
+      "run_id": "fa77ed5a-d93d-42cb-b987-4ae7fe6c9831",
+      "artifact_type": "AI_MODEL",
+      "sha256": "1fcfbcb7af1fe6de94d48f993a8e8434734ffc4b20c8f42a7d826ebb482a6c61",
+      "created_at_utc": "2026-11-15T23:23:29Z",
+      "parent_artifact_ids": [],
+      "model_name": "PTB-XL ECG Normal-Abnormal Random Forest",
+      "model_version": "2.0.0",
+      "storage_ref": null,
+      "storage_state": "LOCAL_ONLY_REFERENCE_NOT_CONFIGURED",
+      "producer": "IA-ECG-prototype"
+    },
+    {
+      "schema_version": "1.0",
+      "artifact_id": "92f2c31e-beb6-4c99-a23d-286b9eb365f2",
+      "case_id": "FABCASE-a224017d-dbf1-45eb-bb1a-978e4b2d3c59",
+      "run_id": "fa77ed5a-d93d-42cb-b987-4ae7fe6c9831",
+      "artifact_type": "AI_PREDICTION",
+      "sha256": "f259ebe6c0648926901b5ba0758083e29f9710635cdeea53984864f60229c855",
+      "created_at_utc": "2026-11-17T22:08:11Z",
+      "parent_artifact_ids": [
+        "846a69cf-7ef9-4e08-a3db-0a2a0e08e04f",
+        "MODEL-1fcfbcb7af1fe6de94d48f99"
+      ],
+      "model_name": "PTB-XL ECG Normal-Abnormal Random Forest",
+      "model_version": "2.0.0",
+      "storage_ref": null,
+      "storage_state": "LOCAL_ONLY_REFERENCE_NOT_CONFIGURED",
+      "producer": "IA-ECG-prototype"
+    },
+    {
+      "schema_version": "1.0",
+      "artifact_id": "7914993b-1c8c-4d78-9d84-b147484cf53f",
+      "case_id": "FABCASE-a224017d-dbf1-45eb-bb1a-978e4b2d3c59",
+      "run_id": "fa77ed5a-d93d-42cb-b987-4ae7fe6c9831",
+      "artifact_type": "AI_VALIDATION",
+      "sha256": "83ca585562b7e23644d3e2c6aa487ea421e1a48f6e8a0b5e0127838c691fb4f5",
+      "created_at_utc": "2026-11-17T22:08:11Z",
+      "parent_artifact_ids": [
+        "588c0eae-9049-4c0b-b7d6-34fc1583eee0",
+        "846a69cf-7ef9-4e08-a3db-0a2a0e08e04f",
+        "92f2c31e-beb6-4c99-a23d-286b9eb365f2"
+      ],
+      "model_name": "PTB-XL ECG Normal-Abnormal Random Forest",
+      "model_version": "2.0.0",
+      "storage_ref": null,
+      "storage_state": "LOCAL_ONLY_REFERENCE_NOT_CONFIGURED",
+      "producer": "IA-ECG-prototype"
+    },
+    {
+      "schema_version": "1.0",
+      "artifact_id": "73a0cdef-34bc-410d-9e93-0461337c4bd2",
+      "case_id": "FABCASE-a224017d-dbf1-45eb-bb1a-978e4b2d3c59",
+      "run_id": "fa77ed5a-d93d-42cb-b987-4ae7fe6c9831",
+      "artifact_type": "AI_EXPLANATION",
+      "sha256": "f036458e3ab0fe0add795c616def8ec25f5afa01e74e1efa662a1d5826030c0a",
+      "created_at_utc": "2026-11-17T22:08:11Z",
+      "parent_artifact_ids": [
+        "92f2c31e-beb6-4c99-a23d-286b9eb365f2",
+        "7914993b-1c8c-4d78-9d84-b147484cf53f"
+      ],
+      "model_name": "PTB-XL ECG Normal-Abnormal Random Forest",
+      "model_version": "2.0.0",
+      "storage_ref": null,
+      "storage_state": "LOCAL_ONLY_REFERENCE_NOT_CONFIGURED",
+      "producer": "IA-ECG-prototype"
+    },
+    {
+      "schema_version": "1.0",
+      "artifact_id": "a3f68255-da9a-4290-9499-c8769449c6e0",
+      "case_id": "FABCASE-a224017d-dbf1-45eb-bb1a-978e4b2d3c59",
+      "run_id": "fa77ed5a-d93d-42cb-b987-4ae7fe6c9831",
+      "artifact_type": "AI_FINAL_RESULT",
+      "sha256": "298c4ba63ebec9342a84def10a015fa84d66a311270904b59ac564450d0eb9bc",
+      "created_at_utc": "2026-11-17T22:08:11Z",
+      "parent_artifact_ids": [
+        "92f2c31e-beb6-4c99-a23d-286b9eb365f2",
+        "7914993b-1c8c-4d78-9d84-b147484cf53f",
+        "73a0cdef-34bc-410d-9e93-0461337c4bd2"
+      ],
+      "model_name": "PTB-XL ECG Normal-Abnormal Random Forest",
+      "model_version": "2.0.0",
+      "storage_ref": null,
+      "storage_state": "LOCAL_ONLY_REFERENCE_NOT_CONFIGURED",
+      "producer": "IA-ECG-prototype"
+    }
+  ],
+  "application_result_payloads_offchain": {
+    "prediction": {
+      "artifact_id": "92f2c31e-beb6-4c99-a23d-286b9eb365f2",
+      "case_id": "FABCASE-a224017d-dbf1-45eb-bb1a-978e4b2d3c59",
+      "run_id": "fa77ed5a-d93d-42cb-b987-4ae7fe6c9831",
+      "artifact_type": "AI_PREDICTION",
+      "predicted_class": "Normal",
+      "confidence": 0.8887,
+      "probabilities": {
+        "Abnormal": 0.1113,
+        "Normal": 0.8887
+      },
+      "model_name": "PTB-XL ECG Normal-Abnormal Random Forest",
+      "model_version": "2.0.0",
+      "model_sha256": "1fcfbcb7af1fe6de94d48f993a8e8434734ffc4b20c8f42a7d826ebb482a6c61",
+      "model_artifact_id": "MODEL-1fcfbcb7af1fe6de94d48f99",
+      "confidence_kind": "random_forest_probability_not_clinically_calibrated",
+      "parent_artifact_id": "846a69cf-7ef9-4e08-a3db-0a2a0e08e04f",
+      "parent_artifact_ids": [
+        "846a69cf-7ef9-4e08-a3db-0a2a0e08e04f"
+      ],
+      "timestamp": "2026-11-17T22:08:11Z"
+    },
+    "validation": {
+      "artifact_id": "7914993b-1c8c-4d78-9d84-b147484cf53f",
+      "artifact_type": "AI_VALIDATION",
+      "case_id": "FABCASE-a224017d-dbf1-45eb-bb1a-978e4b2d3c59",
+      "run_id": "fa77ed5a-d93d-42cb-b987-4ae7fe6c9831",
+      "status": "ACCEPTED",
+      "rules_version": "1.0.0",
+      "timestamp": "2026-11-17T22:08:11Z",
+      "parent_artifact_ids": [
+        "588c0eae-9049-4c0b-b7d6-34fc1583eee0",
+        "846a69cf-7ef9-4e08-a3db-0a2a0e08e04f",
+        "92f2c31e-beb6-4c99-a23d-286b9eb365f2"
+      ],
+      "checks": {
+        "required_artifacts": {
+          "status": "PASS",
+          "missing_artifacts": [],
+          "details": [
+            {
+              "name": "original_ecg",
+              "artifact_id": "1f1fe950-9cb8-40dc-9406-38cbff1fc513",
+              "artifact_type": "ECG_ORIGINAL",
+              "available": true,
+              "sha256": "c65e4abe0eb0e561c37284024c3668afe14e4cc5001b9420b17781e4906c65b6"
+            },
+            {
+              "name": "processed_ecg",
+              "artifact_id": "8db5ca92-03fd-40b5-acf8-88b73221ae80",
+              "artifact_type": "ECG_PROCESSED",
+              "available": true,
+              "sha256": "f0c1a8a6c3e8e09376f04cceb64dc8de12cdc7bdc17cec5ccf059c842b515be0"
+            },
+            {
+              "name": "processing_report",
+              "artifact_id": "588c0eae-9049-4c0b-b7d6-34fc1583eee0",
+              "artifact_type": "PREPROCESSING_REPORT",
+              "available": true,
+              "sha256": "c6c542f165ceedb857f2425a1508f65804cd801ca23fbeb30433c0893acedcfb"
+            },
+            {
+              "name": "features",
+              "artifact_id": "846a69cf-7ef9-4e08-a3db-0a2a0e08e04f",
+              "artifact_type": "FEATURES",
+              "available": true,
+              "sha256": "fa8acb2481cf6bc53287567bbdcf6c3e5f8bf32c3fd994b2899105db643aab38"
+            },
+            {
+              "name": "prediction",
+              "artifact_id": "92f2c31e-beb6-4c99-a23d-286b9eb365f2",
+              "artifact_type": "AI_PREDICTION",
+              "available": true,
+              "sha256": "f259ebe6c0648926901b5ba0758083e29f9710635cdeea53984864f60229c855"
+            },
+            {
+              "name": "model",
+              "artifact_id": null,
+              "artifact_type": "MODEL",
+              "available": true,
+              "sha256": "1fcfbcb7af1fe6de94d48f993a8e8434734ffc4b20c8f42a7d826ebb482a6c61"
+            },
+            {
+              "name": "model_metadata",
+              "artifact_id": null,
+              "artifact_type": "MODEL_METADATA",
+              "available": true,
+              "sha256": "24733403e74dbd25153946dfcf2f84f9cae35a64b7e2ff78caa74563dc0c4925"
+            }
+          ]
+        },
+        "signal_quality": {
+          "status": "PASS",
+          "reason": "Format conforme, aucune valeur invalide détectée ni interpolée."
+        },
+        "prediction_confidence": {
+          "status": "PASS",
+          "reason": "Confiance 0.889 supérieure ou égale au seuil opérationnel 0.80.",
+          "confidence": 0.8887,
+          "threshold": 0.8
+        },
+        "report_consistency": {
+          "status": "PASS",
+          "result": "CONSISTENT",
+          "reference_class": "Normal",
+          "method": "PTB-XL structured diagnostic SCP codes",
+          "reason": "La classe prédite correspond à la classe dérivée des codes diagnostiques du rapport."
+        },
+        "model_and_features": {
+          "status": "PASS",
+          "compatible": true
+        },
+        "run_provenance": {
+          "status": "PASS",
+          "run_ids_match": true
+        }
+      },
+      "reasons": [],
+      "scope": "Contrôles du pipeline uniquement; aucune validation clinique."
+    },
+    "explanation": {
+      "artifact_id": "73a0cdef-34bc-410d-9e93-0461337c4bd2",
+      "artifact_type": "AI_EXPLANATION",
+      "case_id": "FABCASE-a224017d-dbf1-45eb-bb1a-978e4b2d3c59",
+      "run_id": "fa77ed5a-d93d-42cb-b987-4ae7fe6c9831",
+      "parent_artifact_ids": [
+        "92f2c31e-beb6-4c99-a23d-286b9eb365f2",
+        "7914993b-1c8c-4d78-9d84-b147484cf53f"
+      ],
+      "summary": "Le modèle a proposé la classe Normal avec un score de 88.9%. Les contrôles techniques configurés ont été satisfaits.",
+      "validation_status": "ACCEPTED",
+      "findings": [],
+      "confidence_kind": "random_forest_probability_not_clinically_calibrated",
+      "human_review_required": false,
+      "scope": "Explication de règles techniques; ni diagnostic ni explication causale médicale.",
+      "timestamp": "2026-11-17T22:08:11Z"
+    },
+    "final_result": {
+      "artifact_id": "a3f68255-da9a-4290-9499-c8769449c6e0",
+      "artifact_type": "AI_FINAL_RESULT",
+      "case_id": "FABCASE-a224017d-dbf1-45eb-bb1a-978e4b2d3c59",
+      "run_id": "fa77ed5a-d93d-42cb-b987-4ae7fe6c9831",
+      "parent_artifact_ids": [
+        "92f2c31e-beb6-4c99-a23d-286b9eb365f2",
+        "7914993b-1c8c-4d78-9d84-b147484cf53f",
+        "73a0cdef-34bc-410d-9e93-0461337c4bd2"
+      ],
+      "status": "ACCEPTED",
+      "predicted_class": "Normal",
+      "confidence": 0.8887,
+      "human_review_required": false,
+      "workflow_outcome": "RESULT_AVAILABLE",
+      "explanation": "Le modèle a proposé la classe Normal avec un score de 88.9%. Les contrôles techniques configurés ont été satisfaits.",
+      "scope": "Statut d'acceptation du flux technique uniquement; ne constitue pas une décision médicale.",
+      "timestamp": "2026-11-17T22:08:11Z"
+    }
+  },
+  "transmission_scope": {
+    "submit_to_fabric": "ledger_records only, after setting a real storage_ref",
+    "do_not_store_on_ledger": "application_result_payloads_offchain and all medical files"
+  },
+  "privacy": {
+    "contains_raw_ecg": false,
+    "contains_medical_report_text": false,
+    "contains_feature_vector": false,
+    "contains_patient_mapping": false,
+    "note": "Démonstrateur PTB-XL public : les empreintes peuvent être comparées aux enregistrements publics et ne garantissent pas l'anonymat."
+  },
+  "integration_note": "storage_ref est null tant que le connecteur de stockage hors chaîne n'est pas configuré; ne pas soumettre en production avant de le renseigner."
+}

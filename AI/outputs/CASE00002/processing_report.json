@@ -1,0 +1,160 @@
+{
+  "case_id": "CASE00002",
+  "ecg_id": 2,
+  "label": "Normal",
+  "report_text": "sinusbradykardie sonst normales ekg",
+  "scp_codes": "{'NORM': 80.0, 'SBRAD': 0.0}",
+  "timestamp_start": "2026-11-15T23:24:30Z",
+  "timestamp_end": "2026-11-15T23:24:31Z",
+  "source_file": "records500/00000/00002_hr",
+  "format_check": {
+    "n_samples": 5000,
+    "n_leads": 12,
+    "fs": 500,
+    "format_ok": true,
+    "issues": []
+  },
+  "missing_check": {
+    "per_lead": {
+      "I": {
+        "nan_count": 0,
+        "inf_count": 0,
+        "missing_pct": 0.0
+      },
+      "II": {
+        "nan_count": 0,
+        "inf_count": 0,
+        "missing_pct": 0.0
+      },
+      "III": {
+        "nan_count": 0,
+        "inf_count": 0,
+        "missing_pct": 0.0
+      },
+      "aVR": {
+        "nan_count": 0,
+        "inf_count": 0,
+        "missing_pct": 0.0
+      },
+      "aVL": {
+        "nan_count": 0,
+        "inf_count": 0,
+        "missing_pct": 0.0
+      },
+      "aVF": {
+        "nan_count": 0,
+        "inf_count": 0,
+        "missing_pct": 0.0
+      },
+      "V1": {
+        "nan_count": 0,
+        "inf_count": 0,
+        "missing_pct": 0.0
+      },
+      "V2": {
+        "nan_count": 0,
+        "inf_count": 0,
+        "missing_pct": 0.0
+      },
+      "V3": {
+        "nan_count": 0,
+        "inf_count": 0,
+        "missing_pct": 0.0
+      },
+      "V4": {
+        "nan_count": 0,
+        "inf_count": 0,
+        "missing_pct": 0.0
+      },
+      "V5": {
+        "nan_count": 0,
+        "inf_count": 0,
+        "missing_pct": 0.0
+      },
+      "V6": {
+        "nan_count": 0,
+        "inf_count": 0,
+        "missing_pct": 0.0
+      }
+    },
+    "total_missing": 0,
+    "global_missing_pct": 0.0,
+    "quality": "OK"
+  },
+  "interpolated_samples_by_lead": {
+    "I": 0,
+    "II": 0,
+    "III": 0,
+    "aVR": 0,
+    "aVL": 0,
+    "aVF": 0,
+    "V1": 0,
+    "V2": 0,
+    "V3": 0,
+    "V4": 0,
+    "V5": 0,
+    "V6": 0
+  },
+  "normalization_stats": {
+    "I": {
+      "mean": -0.001124,
+      "std": 0.120204
+    },
+    "II": {
+      "mean": -0.002497,
+      "std": 0.181503
+    },
+    "III": {
+      "mean": -0.00138,
+      "std": 0.115036
+    },
+    "aVR": {
+      "mean": 0.001823,
+      "std": 0.142842
+    },
+    "aVL": {
+      "mean": 0.000128,
+      "std": 0.074887
+    },
+    "aVF": {
+      "mean": -0.001933,
+      "std": 0.139429
+    },
+    "V1": {
+      "mean": 0.001461,
+      "std": 0.203581
+    },
+    "V2": {
+      "mean": -0.000408,
+      "std": 0.416433
+    },
+    "V3": {
+      "mean": -0.001401,
+      "std": 0.345914
+    },
+    "V4": {
+      "mean": -0.00199,
+      "std": 0.259062
+    },
+    "V5": {
+      "mean": -0.0017,
+      "std": 0.211827
+    },
+    "V6": {
+      "mean": -0.001293,
+      "std": 0.169822
+    }
+  },
+  "filter_params": {
+    "type": "butterworth_bandpass",
+    "lowcut_hz": 0.5,
+    "highcut_hz": 40.0,
+    "order": 4,
+    "fs_hz": 500
+  },
+  "output_files": {
+    "original_ecg": "C:\\Users\\LENOVO\\Desktop\\projet blockchain\\IA\\outputs\\CASE00002\\original_ecg.csv",
+    "processed_ecg": "C:\\Users\\LENOVO\\Desktop\\projet blockchain\\IA\\outputs\\CASE00002\\processed_ecg.csv"
+  },
+  "status": "OK"
+}

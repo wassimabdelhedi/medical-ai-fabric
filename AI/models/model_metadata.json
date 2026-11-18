@@ -1,0 +1,282 @@
+{
+  "model_name": "PTB-XL ECG Normal-Abnormal Random Forest",
+  "model_version": "2.0.0",
+  "algorithm": "RandomForestClassifier",
+  "model_parameters": {
+    "bootstrap": true,
+    "ccp_alpha": 0.0,
+    "class_weight": "balanced",
+    "criterion": "gini",
+    "max_depth": null,
+    "max_features": "sqrt",
+    "max_leaf_nodes": null,
+    "max_samples": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 2,
+    "min_samples_split": 2,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 300,
+    "n_jobs": -1,
+    "oob_score": false,
+    "random_state": 42,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "software_versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "scipy": "1.17.1",
+    "scikit_learn": "1.6.1",
+    "wfdb": "4.3.1"
+  },
+  "dataset": "PTB-XL v1.0.3",
+  "label_definition": "Normal only when NORM is the sole positive diagnostic SCP code; otherwise Abnormal when another positive diagnostic code exists.",
+  "split_definition": "PTB-XL strat_fold: folds 1-8 train, fold 9 validation, fold 10 test; patient-separated folds.",
+  "preprocessing": {
+    "sampling_rate_hz": 500,
+    "filter": {
+      "type": "Butterworth bandpass",
+      "low_hz": 0.5,
+      "high_hz": 40.0,
+      "order": 4
+    },
+    "invalid_values": "interpolate per lead only up to 0.5%; otherwise reject ECG",
+    "normalization": "per-record, per-lead z-score",
+    "features": [
+      "q01",
+      "q05",
+      "q25",
+      "q75",
+      "q95",
+      "q99",
+      "skewness",
+      "kurtosis",
+      "diff_rms"
+    ]
+  },
+  "n_features": 108,
+  "feature_names": [
+    "I_q01",
+    "I_q05",
+    "I_q25",
+    "I_q75",
+    "I_q95",
+    "I_q99",
+    "I_skewness",
+    "I_kurtosis",
+    "I_diff_rms",
+    "II_q01",
+    "II_q05",
+    "II_q25",
+    "II_q75",
+    "II_q95",
+    "II_q99",
+    "II_skewness",
+    "II_kurtosis",
+    "II_diff_rms",
+    "III_q01",
+    "III_q05",
+    "III_q25",
+    "III_q75",
+    "III_q95",
+    "III_q99",
+    "III_skewness",
+    "III_kurtosis",
+    "III_diff_rms",
+    "aVR_q01",
+    "aVR_q05",
+    "aVR_q25",
+    "aVR_q75",
+    "aVR_q95",
+    "aVR_q99",
+    "aVR_skewness",
+    "aVR_kurtosis",
+    "aVR_diff_rms",
+    "aVL_q01",
+    "aVL_q05",
+    "aVL_q25",
+    "aVL_q75",
+    "aVL_q95",
+    "aVL_q99",
+    "aVL_skewness",
+    "aVL_kurtosis",
+    "aVL_diff_rms",
+    "aVF_q01",
+    "aVF_q05",
+    "aVF_q25",
+    "aVF_q75",
+    "aVF_q95",
+    "aVF_q99",
+    "aVF_skewness",
+    "aVF_kurtosis",
+    "aVF_diff_rms",
+    "V1_q01",
+    "V1_q05",
+    "V1_q25",
+    "V1_q75",
+    "V1_q95",
+    "V1_q99",
+    "V1_skewness",
+    "V1_kurtosis",
+    "V1_diff_rms",
+    "V2_q01",
+    "V2_q05",
+    "V2_q25",
+    "V2_q75",
+    "V2_q95",
+    "V2_q99",
+    "V2_skewness",
+    "V2_kurtosis",
+    "V2_diff_rms",
+    "V3_q01",
+    "V3_q05",
+    "V3_q25",
+    "V3_q75",
+    "V3_q95",
+    "V3_q99",
+    "V3_skewness",
+    "V3_kurtosis",
+    "V3_diff_rms",
+    "V4_q01",
+    "V4_q05",
+    "V4_q25",
+    "V4_q75",
+    "V4_q95",
+    "V4_q99",
+    "V4_skewness",
+    "V4_kurtosis",
+    "V4_diff_rms",
+    "V5_q01",
+    "V5_q05",
+    "V5_q25",
+    "V5_q75",
+    "V5_q95",
+    "V5_q99",
+    "V5_skewness",
+    "V5_kurtosis",
+    "V5_diff_rms",
+    "V6_q01",
+    "V6_q05",
+    "V6_q25",
+    "V6_q75",
+    "V6_q95",
+    "V6_q99",
+    "V6_skewness",
+    "V6_kurtosis",
+    "V6_diff_rms"
+  ],
+  "classes": [
+    "Abnormal",
+    "Normal"
+  ],
+  "confidence_note": "Random Forest class probability; not clinically calibrated.",
+  "validation_metrics": {
+    "n_samples": 2145,
+    "accuracy": 0.8149184149184149,
+    "f1_macro": 0.811663206532521,
+    "classification_report": {
+      "Normal": {
+        "precision": 0.7756613756613756,
+        "recall": 0.7984749455337691,
+        "f1-score": 0.7869028448738594,
+        "support": 918.0
+      },
+      "Abnormal": {
+        "precision": 0.8458333333333333,
+        "recall": 0.8272208638956805,
+        "f1-score": 0.8364235681911826,
+        "support": 1227.0
+      },
+      "accuracy": 0.8149184149184149,
+      "macro avg": {
+        "precision": 0.8107473544973545,
+        "recall": 0.8128479047147248,
+        "f1-score": 0.811663206532521,
+        "support": 2145.0
+      },
+      "weighted avg": {
+        "precision": 0.8158016983016984,
+        "recall": 0.8149184149184149,
+        "f1-score": 0.815230083806426,
+        "support": 2145.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        733,
+        185
+      ],
+      [
+        212,
+        1015
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "Normal",
+      "Abnormal"
+    ],
+    "roc_auc_abnormal": 0.8942547226261689,
+    "pr_auc_abnormal": 0.9249225906748871
+  },
+  "test_metrics": {
+    "n_samples": 2157,
+    "accuracy": 0.8001854427445526,
+    "f1_macro": 0.796710783107831,
+    "classification_report": {
+      "Normal": {
+        "precision": 0.7528675703858185,
+        "recall": 0.7882096069868996,
+        "f1-score": 0.7701333333333333,
+        "support": 916.0
+      },
+      "Abnormal": {
+        "precision": 0.8380634390651085,
+        "recall": 0.8090249798549557,
+        "f1-score": 0.8232882328823288,
+        "support": 1241.0
+      },
+      "accuracy": 0.8001854427445526,
+      "macro avg": {
+        "precision": 0.7954655047254635,
+        "recall": 0.7986172934209277,
+        "f1-score": 0.796710783107831,
+        "support": 2157.0
+      },
+      "weighted avg": {
+        "precision": 0.801883830483639,
+        "recall": 0.8001854427445526,
+        "f1-score": 0.8007152667317122,
+        "support": 2157.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        722,
+        194
+      ],
+      [
+        237,
+        1004
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "Normal",
+      "Abnormal"
+    ],
+    "roc_auc_abnormal": 0.88642241606818,
+    "pr_auc_abnormal": 0.9209479154586713
+  },
+  "rejected_ecgs": {
+    "train": [
+      "records500/12000/12722_hr: ValueError: Dérivation V5 quasi-plate: signal inexploitable."
+    ],
+    "validation": [],
+    "test": []
+  },
+  "n_train_samples": 17072,
+  "n_validation_samples": 2145,
+  "n_test_samples": 2157,
+  "trained_at": "2026-11-15T23:23:29Z",
+  "training_duration_seconds": 8.5
+}

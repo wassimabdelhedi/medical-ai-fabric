@@ -1,0 +1,22 @@
+{
+  "artifact_id": "92f2c31e-beb6-4c99-a23d-286b9eb365f2",
+  "case_id": "CASE00001",
+  "run_id": "fa77ed5a-d93d-42cb-b987-4ae7fe6c9831",
+  "artifact_type": "AI_PREDICTION",
+  "predicted_class": "Normal",
+  "confidence": 0.8887,
+  "probabilities": {
+    "Abnormal": 0.1113,
+    "Normal": 0.8887
+  },
+  "model_name": "PTB-XL ECG Normal-Abnormal Random Forest",
+  "model_version": "2.0.0",
+  "model_sha256": "1fcfbcb7af1fe6de94d48f993a8e8434734ffc4b20c8f42a7d826ebb482a6c61",
+  "model_artifact_id": "MODEL-1fcfbcb7af1fe6de94d48f99",
+  "confidence_kind": "random_forest_probability_not_clinically_calibrated",
+  "parent_artifact_id": "846a69cf-7ef9-4e08-a3db-0a2a0e08e04f",
+  "parent_artifact_ids": [
+    "846a69cf-7ef9-4e08-a3db-0a2a0e08e04f"
+  ],
+  "timestamp": "2026-11-17T22:08:11Z"
+}

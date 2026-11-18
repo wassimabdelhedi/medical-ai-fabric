@@ -1,0 +1,180 @@
+{
+  "artifact_id": "588c0eae-9049-4c0b-b7d6-34fc1583eee0",
+  "artifact_type": "PREPROCESSING_REPORT",
+  "run_id": "fa77ed5a-d93d-42cb-b987-4ae7fe6c9831",
+  "case_id": "CASE00001",
+  "ecg_id": 1,
+  "label": "Normal",
+  "report_text": "sinusrhythmus periphere niederspannung",
+  "scp_codes": "{'NORM': 100.0, 'LVOLT': 0.0, 'SR': 0.0}",
+  "timestamp_start": "2026-11-17T22:08:10Z",
+  "timestamp_end": "2026-11-17T22:08:10Z",
+  "source_file": "records500/00000/00001_hr",
+  "artifacts": {
+    "original_ecg": {
+      "artifact_id": "1f1fe950-9cb8-40dc-9406-38cbff1fc513",
+      "artifact_type": "ECG_ORIGINAL",
+      "parent_artifact_ids": [],
+      "filename": "original_ecg.csv"
+    },
+    "processed_ecg": {
+      "artifact_id": "8db5ca92-03fd-40b5-acf8-88b73221ae80",
+      "artifact_type": "ECG_PROCESSED",
+      "parent_artifact_ids": [
+        "1f1fe950-9cb8-40dc-9406-38cbff1fc513"
+      ],
+      "filename": "processed_ecg.csv"
+    }
+  },
+  "format_check": {
+    "n_samples": 5000,
+    "n_leads": 12,
+    "fs": 500,
+    "format_ok": true,
+    "issues": []
+  },
+  "missing_check": {
+    "per_lead": {
+      "I": {
+        "nan_count": 0,
+        "inf_count": 0,
+        "missing_pct": 0.0
+      },
+      "II": {
+        "nan_count": 0,
+        "inf_count": 0,
+        "missing_pct": 0.0
+      },
+      "III": {
+        "nan_count": 0,
+        "inf_count": 0,
+        "missing_pct": 0.0
+      },
+      "aVR": {
+        "nan_count": 0,
+        "inf_count": 0,
+        "missing_pct": 0.0
+      },
+      "aVL": {
+        "nan_count": 0,
+        "inf_count": 0,
+        "missing_pct": 0.0
+      },
+      "aVF": {
+        "nan_count": 0,
+        "inf_count": 0,
+        "missing_pct": 0.0
+      },
+      "V1": {
+        "nan_count": 0,
+        "inf_count": 0,
+        "missing_pct": 0.0
+      },
+      "V2": {
+        "nan_count": 0,
+        "inf_count": 0,
+        "missing_pct": 0.0
+      },
+      "V3": {
+        "nan_count": 0,
+        "inf_count": 0,
+        "missing_pct": 0.0
+      },
+      "V4": {
+        "nan_count": 0,
+        "inf_count": 0,
+        "missing_pct": 0.0
+      },
+      "V5": {
+        "nan_count": 0,
+        "inf_count": 0,
+        "missing_pct": 0.0
+      },
+      "V6": {
+        "nan_count": 0,
+        "inf_count": 0,
+        "missing_pct": 0.0
+      }
+    },
+    "total_missing": 0,
+    "global_missing_pct": 0.0,
+    "quality": "OK"
+  },
+  "interpolated_samples_by_lead": {
+    "I": 0,
+    "II": 0,
+    "III": 0,
+    "aVR": 0,
+    "aVL": 0,
+    "aVF": 0,
+    "V1": 0,
+    "V2": 0,
+    "V3": 0,
+    "V4": 0,
+    "V5": 0,
+    "V6": 0
+  },
+  "normalization_stats": {
+    "I": {
+      "mean": 0.000629,
+      "std": 0.093854
+    },
+    "II": {
+      "mean": 0.000755,
+      "std": 0.076719
+    },
+    "III": {
+      "mean": 0.000125,
+      "std": 0.038123
+    },
+    "aVR": {
+      "mean": -0.000685,
+      "std": 0.08355
+    },
+    "aVL": {
+      "mean": 0.000258,
+      "std": 0.060412
+    },
+    "aVF": {
+      "mean": 0.000442,
+      "std": 0.038165
+    },
+    "V1": {
+      "mean": 0.000105,
+      "std": 0.111062
+    },
+    "V2": {
+      "mean": 2.9e-05,
+      "std": 0.212574
+    },
+    "V3": {
+      "mean": 5.1e-05,
+      "std": 0.115498
+    },
+    "V4": {
+      "mean": 0.000602,
+      "std": 0.093366
+    },
+    "V5": {
+      "mean": 0.000723,
+      "std": 0.088239
+    },
+    "V6": {
+      "mean": 0.000555,
+      "std": 0.089335
+    }
+  },
+  "filter_params": {
+    "type": "butterworth_bandpass",
+    "lowcut_hz": 0.5,
+    "highcut_hz": 40.0,
+    "order": 4,
+    "fs_hz": 500
+  },
+  "output_files": {
+    "original_ecg": "C:\\Users\\LENOVO\\Desktop\\projet blockchain\\IA\\outputs\\CASE00001\\original_ecg.csv",
+    "processed_ecg": "C:\\Users\\LENOVO\\Desktop\\projet blockchain\\IA\\outputs\\CASE00001\\processed_ecg.csv",
+    "processing_report": "C:\\Users\\LENOVO\\Desktop\\projet blockchain\\IA\\outputs\\CASE00001\\processing_report.json"
+  },
+  "status": "OK"
+}

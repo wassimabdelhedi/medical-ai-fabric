@@ -1,0 +1,19 @@
+{
+  "artifact_id": "a3f68255-da9a-4290-9499-c8769449c6e0",
+  "artifact_type": "AI_FINAL_RESULT",
+  "case_id": "CASE00001",
+  "run_id": "fa77ed5a-d93d-42cb-b987-4ae7fe6c9831",
+  "parent_artifact_ids": [
+    "92f2c31e-beb6-4c99-a23d-286b9eb365f2",
+    "7914993b-1c8c-4d78-9d84-b147484cf53f",
+    "73a0cdef-34bc-410d-9e93-0461337c4bd2"
+  ],
+  "status": "ACCEPTED",
+  "predicted_class": "Normal",
+  "confidence": 0.8887,
+  "human_review_required": false,
+  "workflow_outcome": "RESULT_AVAILABLE",
+  "explanation": "Le modèle a proposé la classe Normal avec un score de 88.9%. Les contrôles techniques configurés ont été satisfaits.",
+  "scope": "Statut d'acceptation du flux technique uniquement; ne constitue pas une décision médicale.",
+  "timestamp": "2026-11-17T22:08:11Z"
+}
