@@ -15,10 +15,7 @@ import os
 import numpy as np
 import pytest
 
-# Ajoute src/ au path pour importer les modules IA
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
-
-from preprocessing import (
+from AI.preprocessing.preprocessing import (
     check_format,
     denoise_signal,
     normalize_signal,

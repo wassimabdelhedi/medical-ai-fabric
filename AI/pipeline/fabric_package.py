@@ -11,11 +11,11 @@ from datetime import datetime, timezone
 from pathlib import Path
 from uuid import uuid4
 
-from artifact_utils import sha256_file
+from AI.common.artifact_utils import sha256_file
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 OUTPUTS_DIR = BASE_DIR / "outputs"
-MODELS_DIR = BASE_DIR / "models"
+MODELS_DIR = BASE_DIR / "model"
 
 
 def _json(path: Path) -> dict:

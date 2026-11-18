@@ -4,13 +4,13 @@ import argparse
 import re
 from uuid import uuid4
 
-from preprocessing import run_preprocessing
-from feature_extraction import run_feature_extraction
-from prediction import run_prediction
-from validation import validate_case
-from explanation import explain_case
-from final_result import finalize_case
-from fabric_package import build_fabric_package
+from AI.preprocessing.preprocessing import run_preprocessing
+from AI.feature_extraction.feature_extraction import run_feature_extraction
+from AI.prediction.prediction import run_prediction
+from AI.validation.validation import validate_case
+from AI.explanation.explanation import explain_case
+from AI.pipeline.final_result import finalize_case
+from AI.pipeline.fabric_package import build_fabric_package
 
 
 def run_pipeline(case_id: str) -> dict:

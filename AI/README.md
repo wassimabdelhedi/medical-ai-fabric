@@ -7,32 +7,32 @@ Prototype pédagogique de classification binaire d’ECG 12 dérivations. Il ne 
 Depuis la racine du projet, avec l’environnement Python activé :
 
 ```powershell
-python -m pip install -r IA/requirements.txt
-python -X utf8 IA/src/pseudonymization.py
-python -X utf8 IA/src/train_test_split.py
-python -X utf8 IA/src/train_model.py
+python -m pip install -r AI/requirements.txt
+python -X utf8 -m AI.dataset.pseudonymization
+python -X utf8 -m AI.model.train_test_split
+python -X utf8 -m AI.model.train_model
 ```
 
-Les données PTB-XL doivent être dans `IA/dataset`, avec `ptbxl_database.csv`, `scp_statements.csv` et `records500/`.
+Les données PTB-XL doivent être dans `AI/dataset`, avec `ptbxl_database.csv`, `scp_statements.csv` et `records500/`.
 L’entraînement utilise les folds PTB-XL : 1–8 pour l’entraînement, 9 pour la validation et 10 pour le test.
 Les fichiers `train_set.csv`, `validation_set.csv` et `test_set.csv` sont générés à partir de ces folds.
 
 Pour traiter puis prédire un cas :
 
 ```powershell
-python -X utf8 IA/src/preprocessing.py --case_id CASE00001
-python -X utf8 IA/src/feature_extraction.py --case_id CASE00001
-python -X utf8 IA/src/prediction.py --case_id CASE00001
+python -X utf8 -m AI.preprocessing.preprocessing --case_id CASE00001
+python -X utf8 -m AI.feature_extraction.feature_extraction --case_id CASE00001
+python -X utf8 -m AI.prediction.prediction --case_id CASE00001
 ```
 
 Pour générer tout le flux, y compris validation, explication, résultat final et manifeste Fabric :
 
 ```powershell
-python -X utf8 IA/src/run_ai_pipeline.py --case_id CASE00001
+python -X utf8 -m AI.pipeline.run_ai_pipeline --case_id CASE00001
 ```
 
 Le flux produit `validation.json`, `explanation.json`, `final_result.json` et `fabric_package.json`
-dans `IA/outputs/<case_id>`. Seuil de confiance initial : 0,80. Une confiance plus faible, une
+dans `AI/outputs/<case_id>`. Seuil de confiance initial : 0,80. Une confiance plus faible, une
 qualité nécessitant correction ou une incohérence avec les codes diagnostiques PTB-XL entraîne
 `REVIEW_REQUIRED`. Une pièce obligatoire absente/invalide entraîne `REJECTED`. `ACCEPTED` signifie
 uniquement que les contrôles techniques configurés passent.
@@ -58,5 +58,13 @@ Butterworth 0,5–40 Hz puis un z-score par dérivation. Les 108 caractéristiqu
 asymétrie, kurtosis et RMS des différences successives (9 par dérivation).
 
 Le modèle, ses versions logicielles, sa règle d’étiquetage et les métriques de validation/test
-sont enregistrés dans `IA/models/model_metadata.json`. Les probabilités Random Forest ne sont pas
-calibrées cliniquement. Le fichier `IA/dataset/id_mapping_SECURE.json` est confidentiel et exclu de Git.
+sont enregistrés dans `AI/model/model_metadata.json`. Les probabilités Random Forest ne sont pas
+calibrées cliniquement. Le fichier `AI/dataset/id_mapping_SECURE.json` est confidentiel et exclu de Git.
+
+## Organisation
+
+- `preprocessing/`, `feature_extraction/`, `prediction/`, `validation/` et `explanation/` contiennent les étapes du pipeline.
+- `model/` contient l'entraînement, le découpage des données et le modèle entraîné.
+- `pipeline/` orchestre les étapes et construit les artefacts destinés à l'intégration Fabric.
+- `common/` contient les utilitaires partagés; `dataset/` et `outputs/` contiennent les données et résultats.
+- `tests/` contient les tests automatisés.

@@ -14,12 +14,12 @@ from uuid import uuid4
 
 import pandas as pd
 
-from artifact_utils import sha256_file
+from AI.common.artifact_utils import sha256_file
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATASET_DIR = os.path.join(BASE_DIR, "dataset")
 OUTPUTS_DIR = os.path.join(BASE_DIR, "outputs")
-MODELS_DIR = os.path.join(BASE_DIR, "models")
+MODELS_DIR = os.path.join(BASE_DIR, "model")
 CONFIDENCE_ACCEPT_THRESHOLD = 0.80
 REQUIRED_FILES = {
     "original_ecg": "original_ecg.csv",
@@ -27,8 +27,8 @@ REQUIRED_FILES = {
     "processing_report": "processing_report.json",
     "features": "features.json",
     "prediction": "prediction.json",
-    "model": os.path.join("..", "models", "ecg_classifier.pkl"),
-    "model_metadata": os.path.join("..", "models", "model_metadata.json"),
+    "model": os.path.join("..", "model", "ecg_classifier.pkl"),
+    "model_metadata": os.path.join("..", "model", "model_metadata.json"),
 }
 
 

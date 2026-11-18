@@ -4,7 +4,7 @@ prediction.py
 Étape 6 du pipeline IA — Exécution du modèle IA pour prédire la classe ECG.
 
 Ce module :
-  1. Charge models/ecg_classifier.pkl et ses métadonnées
+  1. Charge model/ecg_classifier.pkl et ses métadonnées
   2. Charge outputs/<case_id>/features.json
   3. Effectue la prédiction et calcule les probabilités par classe
   4. Génère outputs/<case_id>/prediction.json avec le format exact
@@ -38,13 +38,13 @@ import numpy as np
 from datetime import datetime, timezone
 from uuid import uuid4
 
-from artifact_utils import sha256_file
+from AI.common.artifact_utils import sha256_file
 
 # ─────────────────────────────────────────────────────────
 # CHEMINS
 # ─────────────────────────────────────────────────────────
 BASE_DIR    = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MODELS_DIR  = os.path.join(BASE_DIR, "models")
+MODELS_DIR  = os.path.join(BASE_DIR, "model")
 OUTPUTS_DIR = os.path.join(BASE_DIR, "outputs")
 
 MODEL_PATH  = os.path.join(MODELS_DIR, "ecg_classifier.pkl")

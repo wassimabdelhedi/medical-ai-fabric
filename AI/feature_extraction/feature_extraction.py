@@ -16,7 +16,7 @@ Utilisation en ligne de commande :
   python feature_extraction.py --case_id CASE00001
 
 Utilisation depuis un autre script :
-  from feature_extraction import run_feature_extraction
+  from AI.feature_extraction.feature_extraction import run_feature_extraction
   features = run_feature_extraction("CASE00001")
 """
 

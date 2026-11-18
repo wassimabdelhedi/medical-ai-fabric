@@ -58,7 +58,7 @@ opérationnelle de démonstration, pas une valeur médicale validée.
 Depuis la racine du projet :
 
 ```powershell
-python -X utf8 IA/src/run_ai_pipeline.py --case_id CASE00001
+python -X utf8 -m AI.pipeline.run_ai_pipeline --case_id CASE00001
 ```
 
-Le paquet est écrit dans `IA/outputs/CASE00001/fabric_package.json`.
+Le paquet est écrit dans `AI/outputs/CASE00001/fabric_package.json`.

@@ -17,7 +17,7 @@ Utilisation en ligne de commande :
   python preprocessing.py --case_id CASE00001
 
 Utilisation depuis un autre script :
-  from preprocessing import run_preprocessing
+  from AI.preprocessing.preprocessing import run_preprocessing
   report = run_preprocessing("CASE00001")
 """
 

@@ -12,9 +12,6 @@ import os
 import math
 import pytest
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
-
-
 # ─────────────────────────────────────────────
 # Logique de validation extraite (pure, testable sans fichiers)
 # ─────────────────────────────────────────────

@@ -16,9 +16,7 @@ import math
 import numpy as np
 import pytest
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
-
-from feature_extraction import (
+from AI.feature_extraction.feature_extraction import (
     compute_features_one_lead,
     extract_all_features,
     flatten_features,

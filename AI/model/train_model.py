@@ -19,14 +19,14 @@ from sklearn.metrics import (
     confusion_matrix, f1_score, roc_auc_score,
 )
 
-from preprocessing import (
+from AI.preprocessing.preprocessing import (
     LEAD_NAMES, SAMPLING_RATE, denoise_signal, normalize_signal,
     repair_invalid_values,
 )
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATASET_DIR = os.path.join(BASE_DIR, "dataset")
-MODELS_DIR = os.path.join(BASE_DIR, "models")
+MODELS_DIR = os.path.join(BASE_DIR, "model")
 TRAIN_CSV = os.path.join(DATASET_DIR, "train_set.csv")
 VALIDATION_CSV = os.path.join(DATASET_DIR, "validation_set.csv")
 TEST_CSV = os.path.join(DATASET_DIR, "test_set.csv")

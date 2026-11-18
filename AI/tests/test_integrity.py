@@ -18,9 +18,7 @@ import tempfile
 import hashlib
 import pytest
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
-
-from artifact_utils import sha256_file
+from AI.common.artifact_utils import sha256_file
 
 BASE_DIR   = os.path.join(os.path.dirname(__file__), "..")
 CASE_DIR   = os.path.join(BASE_DIR, "outputs", "CASE00001")
