@@ -14,6 +14,8 @@ NC='\033[0m' # No Color
 # Détection automatique de Fabric Samples
 if [ -n "$FABRIC_SAMPLES_DIR" ] && [ -d "$FABRIC_SAMPLES_DIR/test-network" ]; then
     FABRIC_BASE="$FABRIC_SAMPLES_DIR"
+elif [ -d "$HOME/hyperledger/fabric-samples/test-network" ]; then
+    FABRIC_BASE="$HOME/hyperledger/fabric-samples"
 elif [ -d "$HOME/fabric-lab/fabric-samples/test-network" ]; then
     FABRIC_BASE="$HOME/fabric-lab/fabric-samples"
 elif [ -d "$HOME/fabric-samples/test-network" ]; then
@@ -24,6 +26,7 @@ else
 fi
 
 TEST_NET="$FABRIC_BASE/test-network"
+export PATH="$FABRIC_BASE/bin:$PATH"
 export FABRIC_CFG_PATH="$FABRIC_BASE/config"
 
 echo -e "${BLUE}=================================================================${NC}"

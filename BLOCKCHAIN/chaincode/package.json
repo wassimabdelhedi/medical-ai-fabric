@@ -1,0 +1,24 @@
+{
+  "name": "medical-artifact-chaincode",
+  "version": "1.0.0",
+  "description": "Hyperledger Fabric Chaincode — Traçabilité des artefacts médicaux IA",
+  "main": "index.js",
+  "scripts": {
+    "start": "fabric-chaincode-node start",
+    "test": "mocha --recursive --timeout 10000 test/"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "fabric-contract-api": "^2.5.0",
+    "fabric-shim": "^2.5.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "sinon": "^15.0.4",
+    "sinon-chai": "^3.7.0"
+  },
+  "license": "Apache-2.0"
+}

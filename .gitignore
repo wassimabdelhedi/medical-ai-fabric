@@ -1,0 +1,43 @@
+# =================================================================
+# .gitignore — Medical AI Fabric
+# =================================================================
+
+# Dépendances Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Fichiers Python / IA
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+*.pkl
+*.joblib
+
+# Fichiers temporaires & packages tar.gz Fabric
+*.tar.gz
+*.bak
+*.bak_*
+*.tmp
+*.log
+
+# Stockage hors-chaîne (conserver .gitkeep mais ignorer les dossiers de cas patients volumineux)
+BLOCKCHAIN/storage/*
+!BLOCKCHAIN/storage/.gitkeep
+
+# Clés privées et certificats sensibles
+*.key
+*.pem
+!organizations/**/*.crt
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
